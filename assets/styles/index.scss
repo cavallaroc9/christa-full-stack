@@ -1,2 +1,65 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$background-color: #0086b3;
+$box-border: #fff solid 5px;
+$btn-bg-color: #053444;
+$btn-hover-bg-color: #095b77;
+$btn-margin-size-1: 10px;
+$font-type: arial;
+$hover-color:  #99e6ff;
+$markers-font-color: #3cff3c;
+$module-bg-color: #007399;
+$module-border: 2px solid #004d66;
+$white: #fff;
+
+
+body {
+  background-color: $background-color;
+  font-family: $font-type;
+  height: 100%;
+}
+
+
+.header {
+  clear: both;
+  color: $white;
+  display: block;
+  font-size: 250%;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.link {
+  color: $white;
+  cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.mb-1 {
+  margin-bottom: $btn-margin-size-1;
+}
+
+.ml-1 {
+  margin-left: $btn-margin-size-1;
+}
+
+.mr-1 {
+  margin-right: $btn-margin-size-1 * .5;
+}
+
+.sign-in-header {
+  color: $white;
+}
+
+.sign-in-module {
+  background-color: $module-bg-color;
+  border: $module-border;
+  float: none;
+  margin: 5% auto;
+  padding: 20px;
+}
