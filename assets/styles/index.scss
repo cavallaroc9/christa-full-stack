@@ -21,7 +21,7 @@ body {
   height: 100%;
 }
 .new-exercise-header {
-  background-color: #333333;
+  background-color: #154c7b;
   color: $white;
   font-size: 20px;
   margin-bottom: 15px;
@@ -31,11 +31,6 @@ body {
 
 .border {
   border-color: $white;
-}
-
-.btn-primary {
-  background-color: $nav-color;
-  border-color: $nav-color;
 }
 
 .btn-secondary {
@@ -61,6 +56,15 @@ body {
   font-size: 250%;
   padding-top: 10px;
   text-align: center;
+}
+
+.my-exercises-header {
+  background-color: #154c7b;
+  color: $white;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 .navbar {
   margin-bottom: 1px;
@@ -106,6 +110,13 @@ body {
 .navbar-default {
   background-color: $nav-color;
   border-color: $background-color;
+}
+
+.new-btn {
+  display: block;
+  font-size: 15px;
+  margin: 3% auto;
+  padding: 1% 20%;
 }
 
 .row {
