@@ -79,7 +79,8 @@
   </div>
 </nav>
 
-<div class="list-group">
+<!--list of exercises-->
+<!-- <div class="list-group">
   <a href="#" class="list-group-item">
     <h4 class="list-group-item-heading">List group item heading</h4>
     <p class="list-group-item-text">hello</p>
@@ -90,43 +91,53 @@
     <p class="list-group-item-text">hello</p>
     <small class="text-muted">hey</small>
   </a>
-</div>
+</div> -->
+<!--end list of exercises-->
 
 
 <form>
+  <div class="center new-exercise-header">
+    New Exercise
+     <div class="pull-left cancel-link">X</div>
+     <div class="pull-right save-link">Save</div>
+   </div>
  <div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">type</label>
+  <label for="example-text-input" class="col-2">type</label>
   <div class="col-10">
-    <input class="form-control" type="text" value="Chest Fly" id="example-text-input">
+    <input class="form-control" type="text" id="example-text-input">
   </div>
 </div>
 
 <div class="form-group row">
-  <label for="example-number-input" class="col-2 col-form-label">lbs</label>
+  <label for="example-text-input" class="col-2">Weight per Set (lbs)</label>
   <div class="col-10">
-    <input class="form-control" type="number" size="3" id="example-number-input">
+    <input class="form-control" type="number" id="example-number-input">
   </div>
 </div>
  <div class="form-group row">
-  <label for="example-number-input" class="col-2 col-form-label">sets</label>
+  <label for="example-number-input" class="col-2"># of Sets</label>
   <div class="col-10">
-    <input class="form-control" type="number" value="3" id="example-number-input">
+    <input class="form-control" type="number" id="example-number-input">
   </div>
 </div>
           <div class="form-group row">
-  <label for="example-number-input" class="col-2 col-form-label">reps</label>
+  <label for="example-number-input" class="col-2">Repetitions</label>
   <div class="col-10">
-    <input class="form-control" type="number" value="12" id="example-number-input">
+    <input class="form-control" type="number" id="example-number-input">
   </div>
 </div>
 
      <div class="form-group row">
-  <label for="example-text-input" class="col-2 col-form-label">notes</label>
+  <label for="example-text-input" class="col-2">Notes</label>
   <div class="col-10">
-    <input class="form-control" type="text" value="Chest Fly" id="example-text-input">
+    <input class="form-control" type="text" id="example-text-input">
   </div>
 </div>
-    <button type="submit" class="btn btn-primary col-sm-12 col-md-12 col-lg-12 col-xs-12">Save Exercise</button>
+<!-- <div class="center">
+    <button type="submit" class="save-exercise btn btn-primary">Save Exercise</button>
+    <button type="cancel" class="cancel-exercise btn btn-secondary">Cancel</button>
+  </div> -->
           </form>
+
     </body>
 </html>
