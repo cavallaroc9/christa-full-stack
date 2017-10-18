@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Exercise Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- <h1 class="app-title">Exercise Tracker</h1> -->
+
+      <!--Sign Up Module-->
       <!-- <div id="sign-up-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-up">
               <fieldset>
@@ -27,8 +30,12 @@
                 <div id="sign-in-link" class="link">Already have an account?</div>
               </fieldset>
             </form>
-          </div>
-          <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
+          </div> -->
+        <!--End Sign Up Module-->
+
+
+        <!--Sign-In Module-->
+          <!-- <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-in">
               <fieldset>
                 <legend class="sign-in-header .col-form-legend">Sign In</legend>
@@ -41,25 +48,14 @@
                 <div id="sign-up-link" class="link">Create an account</div>
               </fieldset>
             </form>
-          </div>
-        <div id="change-password-div" class="col-xs-10 col-md-6 sign-in-module">
-            <form id="change-password">
-              <fieldset>
-                <legend class="sign-in-header">Change Password</legend>
-                <input class="form-control form-control-lg" type="password" name="passwords[old]" placeholder="Enter Old Password">
-                <br>
-                <input class="form-control form-control-lg" type="password" name="passwords[new]" placeholder="Enter New Password">
-                <br>
-                <input type="submit" name="submit" value="Change Password" class="btn btn-primary btn-lg mb-1">
-                <button id="cancel-password" type="button" class="btn btn-secondary btn-lg mb-1">Cancel</button>
-              </fieldset>
-            </form>
-        </div> -->
+          </div> -->
+
+          <!--End Sign-In-Module
 
 
 
 
-<!--Nav Bar-->
+<!-Nav Bar-->
         <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -69,6 +65,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div class="navbar-brand">Exercise Tracker</div>
     </div>
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -83,41 +80,44 @@
 
 <!--Change Password -->
 
-<form>
-  <div class="center new-exercise-header">
+<!-- <form>
+  <div class="center app-header">
     Change Password
      <div class="pull-left cancel-link">X</div>
      <div class="pull-right save-link">Save</div>
    </div>
+   <div class="change-password-module">
  <div class="form-group row">
   <label for="example-text-input" class="col-2">Current Password</label>
   <div class="col-10">
-    <input class="form-control" type="text" id="example-text-input">
+    <input class="form-control" type="password">
   </div>
 </div>
 
 <div class="form-group row">
   <label for="example-text-input" class="col-2">New Password</label>
   <div class="col-10">
-    <input class="form-control" type="number" id="example-number-input">
+    <input class="form-control" type="password">
   </div>
 </div>
  <div class="form-group row">
   <label for="example-number-input" class="col-2">Verify New Password</label>
   <div class="col-10">
-    <input class="form-control" type="number" id="example-number-input">
+    <input class="form-control" type="password">
   </div>
 </div>
-</form>
+</div>
+</form> -->
+
 <!--End of Change Password-->
 
 <!--List of all exercises-->
 <!-- <div>
 <div>
-  <div class="center my-exercises-header">
+  <div class="center app-header">
     My Excercises
-   </div> -->
-<!-- <div class="list-group">
+   </div>
+<div class="list-group">
   <a href="#" class="list-group-item">
     <h4 class="list-group-item-heading">Lounges</h4>
     <p class="list-group-item-text">hello</p>
@@ -136,11 +136,11 @@
 <!--end list of exercises-->
 
 <!--Exercise Form-->
-<!-- <form>
-  <div class="center new-exercise-header">
+<form>
+  <div class="center app-header">
     New Exercise
-     <div class="pull-left cancel-link">X</div>
-     <div class="pull-right save-link">Save</div>
+     <div class="app-header-btn pull-left cancel-link">X</div>
+     <div class="app-header-btn pull-right save-link">Save</div>
    </div>
  <div class="form-group row">
   <label for="example-text-input" class="col-2">type</label>
@@ -173,12 +173,12 @@
   <div class="col-10">
     <input class="form-control" type="text" id="example-text-input">
   </div>
-</div> -->
-<!-- <div class="center">
+</div>
+<div class="center">
     <button type="submit" class="save-exercise btn btn-primary">Save Exercise</button>
     <button type="cancel" class="cancel-exercise btn btn-secondary">Cancel</button>
   </div>
-</form> -->
+</form>
 <!--End of Exercise Form -->
 
     </body>
