@@ -1,16 +1,17 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #0086b3;
+$background-color: #f2f2f2;
+$black: #000;
 $box-border: #fff solid 5px;
 $btn-bg-color: #053444;
 $btn-hover-bg-color: #095b77;
 $btn-margin-size-1: 10px;
 $font-type: arial;
-$hover-color:  #99e6ff;
-$markers-font-color: #3cff3c;
+$hover-color:  #d4f4f7;
 $module-bg-color: #007399;
 $module-border: 2px solid #004d66;
+$nav-color: #2dc8d7;
 $white: #fff;
 
 
@@ -19,7 +20,39 @@ body {
   font-family: $font-type;
   height: 100%;
 }
+.new-exercise-header {
+  background-color: #333333;
+  color: $white;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
 
+.border {
+  border-color: $white;
+}
+
+.btn-primary {
+  background-color: $nav-color;
+  border-color: $nav-color;
+}
+
+.btn-secondary {
+  background-color: #808080;
+  color: $white;
+}
+
+.cancel-link {
+  padding-left: 15px;
+}
+
+.cancel-exercise {
+  margin-left: 10px;
+}
+.center {
+  text-align: center;
+}
 
 .header {
   clear: both;
@@ -28,6 +61,23 @@ body {
   font-size: 250%;
   padding-top: 10px;
   text-align: center;
+}
+.navbar {
+  margin-bottom: 1px;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: $background-color;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $white;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    color: $hover-color;
+  }
 }
 
 .link {
@@ -50,6 +100,25 @@ body {
 
 .mr-1 {
   margin-right: $btn-margin-size-1 * .5;
+}
+
+
+.navbar-default {
+  background-color: $nav-color;
+  border-color: $background-color;
+}
+
+.row {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.save-exercise {
+  margin-right: 10px;
+}
+
+.save-link {
+  padding-right: 15px;
 }
 
 .sign-in-header {

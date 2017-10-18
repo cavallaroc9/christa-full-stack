@@ -12,7 +12,7 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div id="sign-up-div" class="col-xs-10 col-md-6 sign-in-module">
+      <!-- <div id="sign-up-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-up">
               <fieldset>
                 <legend class="sign-in-header">Sign Up</legend>
@@ -54,6 +54,90 @@
                 <button id="cancel-password" type="button" class="btn btn-secondary btn-lg mb-1">Cancel</button>
               </fieldset>
             </form>
-        </div>
+        </div> -->
+        <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed border" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a class ="nav-link">Change Password</a></li>
+        <li><a class = "nav-link">Log out</a></li>
+      </ul>
+
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+</nav>
+
+<!--list of exercises-->
+<!-- <div class="list-group">
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">hello</p>
+    <small class="text-muted">hey</small>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">List group item heading</h4>
+    <p class="list-group-item-text">hello</p>
+    <small class="text-muted">hey</small>
+  </a>
+</div> -->
+<!--end list of exercises-->
+
+
+<form>
+  <div class="center new-exercise-header">
+    New Exercise
+     <div class="pull-left cancel-link">X</div>
+     <div class="pull-right save-link">Save</div>
+   </div>
+ <div class="form-group row">
+  <label for="example-text-input" class="col-2">type</label>
+  <div class="col-10">
+    <input class="form-control" type="text" id="example-text-input">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-text-input" class="col-2">Weight per Set (lbs)</label>
+  <div class="col-10">
+    <input class="form-control" type="number" id="example-number-input">
+  </div>
+</div>
+ <div class="form-group row">
+  <label for="example-number-input" class="col-2"># of Sets</label>
+  <div class="col-10">
+    <input class="form-control" type="number" id="example-number-input">
+  </div>
+</div>
+          <div class="form-group row">
+  <label for="example-number-input" class="col-2">Repetitions</label>
+  <div class="col-10">
+    <input class="form-control" type="number" id="example-number-input">
+  </div>
+</div>
+
+     <div class="form-group row">
+  <label for="example-text-input" class="col-2">Notes</label>
+  <div class="col-10">
+    <input class="form-control" type="text" id="example-text-input">
+  </div>
+</div>
+<!-- <div class="center">
+    <button type="submit" class="save-exercise btn btn-primary">Save Exercise</button>
+    <button type="cancel" class="cancel-exercise btn btn-secondary">Cancel</button>
+  </div> -->
+          </form>
+
     </body>
 </html>
