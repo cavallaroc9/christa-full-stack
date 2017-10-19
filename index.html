@@ -11,8 +11,11 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body>
-      <!-- <h1 class="app-title">Exercise Tracker</h1> -->
+      <div id="auth-modules">
+      <h1 class="app-title">Exercise Tracker</h1>
+      <div id="message" class="alert-message"></div>
 
       <!--Sign Up Module-->
       <div id="sign-up-div" class="col-xs-10 col-md-6 sign-in-module">
@@ -35,7 +38,7 @@
 
 
         <!--Sign-In Module-->
-          <!-- <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
+          <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-in">
               <fieldset>
                 <legend class="sign-in-header .col-form-legend">Sign In</legend>
@@ -48,15 +51,12 @@
                 <div id="sign-up-link" class="link">Create an account</div>
               </fieldset>
             </form>
-          </div> -->
+          </div>
+          <!--End Sign-In-Module-->
+        </div>
 
-          <!--End Sign-In-Module
-
-
-
-
-<!-Nav Bar-->
-        <!-- <nav class="navbar navbar-default">
+<!--Nav Bar-->
+        <nav id="app-nav-bar" class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed border" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -75,7 +75,7 @@
 
     </div>
   </div>
-</nav> -->
+</nav>
 <!--End of Nav Bar-->
 
 <!--Change Password -->
@@ -112,7 +112,7 @@
 <!--End of Change Password-->
 
 <!--List of all exercises-->
-<!-- <div>
+<div id="all-exercises">
 <div>
   <div class="center app-header">
     My Excercises
@@ -132,7 +132,7 @@
 
 <button class="btn btn-primary new-btn">+ Add New Exercise</button>
 </div>
-</div> -->
+</div>
 <!--end list of exercises-->
 
 <!--New Exercise Form-->

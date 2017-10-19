@@ -16,5 +16,26 @@ $(() => {
 
 $(() => {
   // Sign Up
-$('#sign-up').on('submit', authEvents.onSignUp)
+  $('#sign-up-div').hide()
+  $('#sign-up-link').on('click', function () {
+    $('#sign-in-div').hide()
+    $('#sign-in input:text').val(null)
+    $('#sign-in input:password').val(null)
+    $('#sign-up-div').show()
+    $('#message').text('')
+  })
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  // Sign In
+  $('#sign-in-link').on('click', function () {
+    $('#sign-up-div').hide()
+    $('#sign-up input:text').val(null)
+    $('#sign-up input:password').val(null)
+    $('#sign-in-div').show()
+    $('#message').text('')
+  })
+  $('#sign-in').on('submit', authEvents.onSignIn)
+
+  // App
+  $('#app-nav-bar').hide()
+  $('#all-exercises').hide()
 })

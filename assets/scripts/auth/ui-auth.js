@@ -12,6 +12,33 @@ const signUpSuccess = function (data) {
   $('#message').text('You have successfully created an account!')
 }
 
+const signUpFailure = function (error) {
+  console.error(error)
+  $('#message').text('Oops! Something went wrong creating your account. Please try again.')
+}
+
+const signInSuccess = function (data) {
+  console.log(data)
+  store.user = data.user
+  $('#auth-modules').hide()
+  $('#sign-in input:text').val(null)
+  $('#sign-in input:password').val(null)
+  $('#all-exercises').show()
+  $('#app-nav-bar').show()
+  // $('#change-password-button').show()
+  // $('#sign-out-button').show()
+  // $('#create-button').show()
+  // $('#message').text('Signed in as ' + store.user.email)
+}
+
+const signInFailure = function (error) {
+  console.log(error)
+  $('#message').text('Oops! Something went wrong. Please try signing in again.')
+}
+
 module.exports = {
-  signUpSuccess
+  signUpSuccess,
+  signUpFailure,
+  signInSuccess,
+  signInFailure
 }
