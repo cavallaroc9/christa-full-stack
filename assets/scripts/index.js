@@ -2,6 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
+const authEvents = require('./auth/events-auth')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -14,5 +15,6 @@ $(() => {
 // require('./example')
 
 $(() => {
-
+  // Sign Up
+$('#sign-up').on('submit', authEvents.onSignUp)
 })
