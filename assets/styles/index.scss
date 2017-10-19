@@ -54,9 +54,12 @@ body {
 
 .btn-primary {
   background-color: $btn-primary-color;
+  border: 0;
 }
 
 .cancel-link {
+  background: 0;
+  border: 0;
   cursor: pointer;
   padding-left: 15px;
 }
@@ -167,7 +170,8 @@ body {
 }
 
 .save-link {
-  cursor: pointer;
+  background: 0;
+  border: 0;
   padding-right: 15px;
 }
 

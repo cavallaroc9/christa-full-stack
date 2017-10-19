@@ -42,11 +42,11 @@ $(() => {
     $('#change-password-page').show('swing')
   })
   $('#cancel-change-password').on('click', function () {
+    $('#app-message').text('')
     $('#change-password-page').hide()
     $('#change-password-page input:password').val(null)
     $('#change-password-link').show()
     $('#all-exercises').show('swing')
-    $('#app-message').text('')
   })
   $('#change-password').on('submit', authEvents.onChangePassword)
   // App

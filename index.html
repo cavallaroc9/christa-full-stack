@@ -80,53 +80,31 @@
 </nav>
 <!--End of Nav Bar-->
 
-<!--Change Password -->
-<!-- <div id="change-password-page">
-<form id="change-password">
-  <fieldset>
-  <div class="center app-header">
-    Change Password
-    <div id="cancel-change-password" class="app-header-btn pull-left cancel-link" type="submit"><span class="glyphicon glyphicon-remove"></span></div>
-    <div id="save-change-password" class="app-header-btn pull-right save-link"><span class="glyphicon glyphicon-ok"></span></div>
-   </div>
-   <div class="change-password-module">
- <div class="form-group row">
-  <label class="col-2">Current Password</label>
-  <div class="col-10">
-    <input class="form-control" type="password" name="passwords[old]">
-  </div>
-</div>
-
-<div class="form-group row">
-  <label for="example-text-input" class="col-2">New Password</label>
-  <div class="col-10">
-    <input class="form-control" type="password" name="passwords[new]">
-  </div>
-</div>
-</div>
-</fieldset>
-</form>
-</div> -->
-
-<!--End of Change Password-->
-
 
 <!-- New change password -->
-<div id="change-password-div">
+<div id="change-password-page">
     <form id="change-password">
       <fieldset>
         <div class="center app-header">
           Change Password
-          <button id="cancel-change-password" class="app-header-btn pull-left cancel-link"><span class="glyphicon glyphicon-remove"></span></button>
+          <div id="cancel-change-password" class="app-header-btn pull-left cancel-link"><span class="glyphicon glyphicon-remove"></span></div>
           <button id="save-change-password" type="submit" class="app-header-btn pull-right save-link"><span class="glyphicon glyphicon-ok"></span></button>
          </div>
+         <div class="form-group row">
+          <label class="col-2">Current Password</label>
+          <div class="col-10">
+            <input class="form-control form-control-lg" type="password" name="passwords[old]">
+        </div>
+      </div>
 
-        <input class="form-control form-control-lg" type="password" name="passwords[old]" placeholder="Enter Old Password">
-        <br>
-        <input class="form-control form-control-lg" type="password" name="passwords[new]" placeholder="Enter New Password">
-        <br>
-        <input type="submit" name="submit" value="Change Password" class="btn btn-primary btn-lg mb-1">
-        <button id="cancel-password" type="button" class="btn btn-secondary btn-lg mb-1">Cancel</button>
+        <div class="form-group row">
+          <label for="example-text-input" class="col-2">New Password</label>
+          <div class="col-10">
+        <div class="col-10">
+        <input class="form-control form-control-lg" type="password" name="passwords[new]">
+      </div>
+      </div>
+    </div>
       </fieldset>
     </form>
 </div>
