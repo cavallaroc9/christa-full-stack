@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Exercise Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <!-- <h1 class="app-title">Exercise Tracker</h1> -->
+
+      <!--Sign Up Module-->
       <!-- <div id="sign-up-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-up">
               <fieldset>
@@ -27,8 +30,12 @@
                 <div id="sign-in-link" class="link">Already have an account?</div>
               </fieldset>
             </form>
-          </div>
-          <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
+          </div> -->
+        <!--End Sign Up Module-->
+
+
+        <!--Sign-In Module-->
+          <!-- <div id="sign-in-div" class="col-xs-10 col-md-6 sign-in-module">
             <form id="sign-in">
               <fieldset>
                 <legend class="sign-in-header .col-form-legend">Sign In</legend>
@@ -41,23 +48,16 @@
                 <div id="sign-up-link" class="link">Create an account</div>
               </fieldset>
             </form>
-          </div>
-        <div id="change-password-div" class="col-xs-10 col-md-6 sign-in-module">
-            <form id="change-password">
-              <fieldset>
-                <legend class="sign-in-header">Change Password</legend>
-                <input class="form-control form-control-lg" type="password" name="passwords[old]" placeholder="Enter Old Password">
-                <br>
-                <input class="form-control form-control-lg" type="password" name="passwords[new]" placeholder="Enter New Password">
-                <br>
-                <input type="submit" name="submit" value="Change Password" class="btn btn-primary btn-lg mb-1">
-                <button id="cancel-password" type="button" class="btn btn-secondary btn-lg mb-1">Cancel</button>
-              </fieldset>
-            </form>
-        </div> -->
+          </div> -->
+
+          <!--End Sign-In-Module
+
+
+
+
+<!-Nav Bar-->
         <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed border" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
@@ -65,9 +65,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <div class="navbar-brand">Exercise Tracker</div>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li><a class ="nav-link">Change Password</a></li>
@@ -75,34 +74,76 @@
       </ul>
 
     </div>
-    <!-- /.navbar-collapse -->
   </div>
 </nav>
+<!--End of Nav Bar-->
 
-<!--list of exercises-->
-<!-- <div class="list-group">
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">hello</p>
-    <small class="text-muted">hey</small>
-  </a>
-  <a href="#" class="list-group-item">
-    <h4 class="list-group-item-heading">List group item heading</h4>
-    <p class="list-group-item-text">hello</p>
-    <small class="text-muted">hey</small>
-  </a>
-</div> -->
-<!--end list of exercises-->
+<!--Change Password -->
 
-
-<form>
-  <div class="center new-exercise-header">
-    New Exercise
+<!-- <form>
+  <div class="center app-header">
+    Change Password
      <div class="pull-left cancel-link">X</div>
      <div class="pull-right save-link">Save</div>
    </div>
+   <div class="change-password-module">
  <div class="form-group row">
-  <label for="example-text-input" class="col-2">type</label>
+  <label for="example-text-input" class="col-2">Current Password</label>
+  <div class="col-10">
+    <input class="form-control" type="password">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-text-input" class="col-2">New Password</label>
+  <div class="col-10">
+    <input class="form-control" type="password">
+  </div>
+</div>
+ <div class="form-group row">
+  <label for="example-number-input" class="col-2">Verify New Password</label>
+  <div class="col-10">
+    <input class="form-control" type="password">
+  </div>
+</div>
+</div>
+</form> -->
+
+<!--End of Change Password-->
+
+<!--List of all exercises-->
+<div>
+<div>
+  <div class="center app-header">
+    My Excercises
+   </div>
+<div class="list-group">
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">Skull Crushers</h4>
+    <p class="list-group-item-text">3 sets x 12 reps x 20 lbs</p>
+    <small class="text-muted">arms should be perpendicular to the floor</small>
+  </a>
+  <a href="#" class="list-group-item">
+    <h4 class="list-group-item-heading">Dead Lifts</h4>
+    <p class="list-group-item-text">3 sets x 12 reps x 30 lbs</p>
+    <small class="text-muted">keep back straight</small>
+  </a>
+</div>
+
+<button class="btn btn-primary new-btn">+ Add New Exercise</button>
+</div>
+</div>
+<!--end list of exercises-->
+
+<!--New Exercise Form-->
+<!-- <form>
+  <div class="center app-header">
+    New Exercise
+    <div class="app-header-btn pull-left cancel-link"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+    <div class="app-header-btn pull-right save-link"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>
+   </div>
+ <div class="form-group row">
+  <label for="example-text-input" class="col-2">Name</label>
   <div class="col-10">
     <input class="form-control" type="text" id="example-text-input">
   </div>
@@ -133,11 +174,54 @@
     <input class="form-control" type="text" id="example-text-input">
   </div>
 </div>
-<!-- <div class="center">
-    <button type="submit" class="save-exercise btn btn-primary">Save Exercise</button>
-    <button type="cancel" class="cancel-exercise btn btn-secondary">Cancel</button>
-  </div> -->
-          </form>
+
+</form> -->
+<!--End of New Exercise Form -->
+
+<!--Edit Exercise Form-->
+<!-- <form>
+  <div class="center app-header">
+    Edit Exercise
+     <div class="app-header-btn pull-left cancel-link"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></div>
+     <div class="app-header-btn pull-right save-link"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></div>
+   </div>
+ <div class="form-group row">
+  <label for="example-text-input" class="col-2">Name</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="Skull Crushers" id="example-text-input">
+  </div>
+</div>
+
+<div class="form-group row">
+  <label for="example-text-input" class="col-2">Weight per Set (lbs)</label>
+  <div class="col-10">
+    <input class="form-control" type="number" value="20" id="example-number-input">
+  </div>
+</div>
+ <div class="form-group row">
+  <label for="example-number-input" class="col-2"># of Sets</label>
+  <div class="col-10">
+    <input class="form-control" type="number" value="3" id="example-number-input">
+  </div>
+</div>
+          <div class="form-group row">
+  <label for="example-number-input" class="col-2">Repetitions</label>
+  <div class="col-10">
+    <input class="form-control" type="number" value="12" id="example-number-input">
+  </div>
+</div>
+
+     <div class="form-group row">
+  <label for="example-text-input" class="col-2">Notes</label>
+  <div class="col-10">
+    <input class="form-control" type="text" value="arms should be perpendicular to the floor" id="example-text-input">
+  </div>
+</div>
+<div class="center">
+    <button class="delete-exercise btn btn-danger ">Delete Exercise</button>
+  </div>
+</form> -->
+<!--End of Edit Exercise Form -->
 
     </body>
 </html>
