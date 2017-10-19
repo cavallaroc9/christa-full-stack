@@ -38,7 +38,7 @@ $(() => {
   $('#change-password-page').hide()
   $('#change-password-link').on('click', function () {
     $('#change-password-link').hide()
-    $('#all-exercises').hide()
+    $('#all-exercises-page').hide()
     $('#change-password-page').show('swing')
   })
   $('#cancel-change-password').on('click', function () {
@@ -46,10 +46,14 @@ $(() => {
     $('#change-password-page').hide()
     $('#change-password-page input:password').val(null)
     $('#change-password-link').show()
-    $('#all-exercises').show('swing')
+    $('#all-exercises-page').show('swing')
   })
   $('#change-password').on('submit', authEvents.onChangePassword)
+
+  // Sign Out
+  $('#sign-out-link').on('click', authEvents.onSignOut)
+
   // App
   $('#app-nav-bar').hide()
-  $('#all-exercises').hide()
+  $('#all-exercises-page').hide()
 })
