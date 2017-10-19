@@ -2,6 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
+const authEvents = require('./auth/events-auth')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -14,5 +15,45 @@ $(() => {
 // require('./example')
 
 $(() => {
+  // Sign Up
+  $('#sign-up-div').hide()
+  $('#sign-up-link').on('click', function () {
+    $('#sign-in-div').hide()
+    $('#sign-in input:text').val(null)
+    $('#sign-in input:password').val(null)
+    $('#sign-up-div').show()
+    $('#message').text('')
+  })
+  $('#sign-up').on('submit', authEvents.onSignUp)
+  // Sign In
+  $('#sign-in-link').on('click', function () {
+    $('#sign-up-div').hide()
+    $('#sign-up input:text').val(null)
+    $('#sign-up input:password').val(null)
+    $('#sign-in-div').show()
+    $('#message').text('')
+  })
+  $('#sign-in').on('submit', authEvents.onSignIn)
+  // Change password
+  $('#change-password-page').hide()
+  $('#change-password-link').on('click', function () {
+    $('#change-password-link').hide()
+    $('#all-exercises-page').hide()
+    $('#change-password-page').show('swing')
+  })
+  $('#cancel-change-password').on('click', function () {
+    $('#app-message').text('')
+    $('#change-password-page').hide()
+    $('#change-password-page input:password').val(null)
+    $('#change-password-link').show()
+    $('#all-exercises-page').show('swing')
+  })
+  $('#change-password').on('submit', authEvents.onChangePassword)
 
+  // Sign Out
+  $('#sign-out-link').on('click', authEvents.onSignOut)
+
+  // App
+  $('#app-nav-bar').hide()
+  $('#all-exercises-page').hide()
 })

@@ -1,5 +1,6 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import '~//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css';
 
 $app-header-bg-color: #154c7b;
 $background-color: #f2f2f2;
@@ -53,9 +54,12 @@ body {
 
 .btn-primary {
   background-color: $btn-primary-color;
+  border: 0;
 }
 
 .cancel-link {
+  background: 0;
+  border: 0;
   cursor: pointer;
   padding-left: 15px;
 }
@@ -166,7 +170,8 @@ body {
 }
 
 .save-link {
-  cursor: pointer;
+  background: 0;
+  border: 0;
   padding-right: 15px;
 }
 
