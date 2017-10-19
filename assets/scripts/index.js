@@ -34,7 +34,21 @@ $(() => {
     $('#message').text('')
   })
   $('#sign-in').on('submit', authEvents.onSignIn)
-
+  // Change password
+  $('#change-password-page').hide()
+  $('#change-password-link').on('click', function () {
+    $('#change-password-link').hide()
+    $('#all-exercises').hide()
+    $('#change-password-page').show('swing')
+  })
+  $('#cancel-change-password').on('click', function () {
+    $('#change-password-page').hide()
+    $('#change-password-page input:password').val(null)
+    $('#change-password-link').show()
+    $('#all-exercises').show('swing')
+    $('#app-message').text('')
+  })
+  $('#change-password').on('submit', authEvents.onChangePassword)
   // App
   $('#app-nav-bar').hide()
   $('#all-exercises').hide()

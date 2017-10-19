@@ -36,9 +36,25 @@ const signInFailure = function (error) {
   $('#message').text('Oops! Something went wrong. Please try signing in again.')
 }
 
+const changePasswordSuccess = function () {
+  console.log('Changed Password successfully!')
+  $('#change-password-page').hide()
+  $('#change-password-page input:password').val(null)
+  $('#change-password-link').show()
+  $('#all-exercises').show('swing')
+  $('#app-message').text('You have successfully changed your password for account ' + store.user.email)
+}
+
+const changePasswordFailure = function (error) {
+  console.log(error)
+  $('#app-message').text('Oops! Something went wrong. Please try changing your password again.')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure
 }
