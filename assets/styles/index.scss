@@ -1,4 +1,5 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css');
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 $app-header-bg-color: #154c7b;
@@ -13,7 +14,7 @@ $font-type: arial;
 $hover-color:  #d4f4f7;
 $module-bg-color: #2dc8d7;
 $module-border: 2px solid #004d66;
-$nav-color: #2dc8d7;
+$nav-color: #0ba2b1;
 $white: #fff;
 
 
@@ -42,16 +43,6 @@ body {
   text-align: center;
 }
 
-.new-exercise-header {
-  background-color: #154c7b;
-  color: $white;
-  font-family: 'Silom';
-  font-size: 20px;
-  margin-bottom: 15px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
 .border {
   border-color: $white;
 }
@@ -66,14 +57,23 @@ body {
 }
 
 .cancel-link {
+  cursor: pointer;
   padding-left: 15px;
 }
 
 .cancel-exercise {
   margin-left: 10px;
 }
+
 .center {
   text-align: center;
+}
+
+.delete-exercise {
+  display: block;
+  font-size: 18px;
+  margin: 3% auto;
+  padding: 1% 15%;
 }
 
 
@@ -86,6 +86,10 @@ body {
   text-align: center;
 }
 
+.list-group-item-heading {
+  font-weight: bold;
+}
+
 .navbar {
   margin-bottom: 1px;
 }
@@ -94,8 +98,19 @@ body {
   font-family: 'Silom';
 }
 
+.navbar-default {
+  background-color: $nav-color;
+  border-color: $nav-color;
+}
+
 .navbar-default .navbar-brand {
   color: $white;
+}
+
+.navbar-default .navbar-toggle {
+  &:hover {
+    background-color: #0a7382;
+  }
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -135,12 +150,6 @@ body {
   margin-right: $btn-margin-size-1 * .5;
 }
 
-
-.navbar-default {
-  background-color: $nav-color;
-  border-color: $background-color;
-}
-
 .new-btn {
   display: block;
   font-size: 18px;
@@ -158,6 +167,7 @@ body {
 }
 
 .save-link {
+  cursor: pointer;
   padding-right: 15px;
 }
 
