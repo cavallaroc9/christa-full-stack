@@ -38,7 +38,7 @@ const signInFailure = function (error) {
 const changePasswordSuccess = function () {
   console.log('Changed Password successfully!')
   $('#change-password-page').hide()
-  $('#change-password-page input:password').val(null)
+  $('#change-password-page input').val(null)
   $('#change-password-link').show()
   $('#all-exercises-page').show('swing')
   $('#app-message').text('You have successfully changed your password for account ' + store.user.email)
@@ -57,8 +57,9 @@ const signOutSuccess = function () {
   $('#all-exercises-page').hide()
   $('#new-exercise-page').hide()
   $('#auth-modules').show()
-  $('#change-password input:password').val(null)
+  $('#change-password input').val(null)
   $('#message').text('You have signed out successfully!')
+  $('app-message').text('')
   console.log(store.user)
 }
 
