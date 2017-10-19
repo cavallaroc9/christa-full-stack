@@ -20,8 +20,7 @@ $(() => {
   $('#sign-up-div').hide()
   $('#sign-up-link').on('click', function () {
     $('#sign-in-div').hide()
-    $('#sign-in input:text').val(null)
-    $('#sign-in input:password').val(null)
+    $('#sign-in input').val(null)
     $('#sign-up-div').show()
     $('#message').text('')
   })
@@ -29,8 +28,7 @@ $(() => {
   // Sign In
   $('#sign-in-link').on('click', function () {
     $('#sign-up-div').hide()
-    $('#sign-up input:text').val(null)
-    $('#sign-up input:password').val(null)
+    $('#sign-up input').val(null)
     $('#sign-in-div').show()
     $('#message').text('')
   })
@@ -46,7 +44,7 @@ $(() => {
   $('#cancel-change-password').on('click', function () {
     $('#app-message').text('')
     $('#change-password-page').hide()
-    $('#change-password-page input:password').val(null)
+    $('#change-password-page input').val(null)
     $('#change-password-link').show()
     $('#all-exercises-page').show('swing')
   })
@@ -69,6 +67,7 @@ $(() => {
   $('#cancel-new-exercise').on('click', function () {
     $('#new-exercise-page').hide()
     $('#all-exercises-page').show('swing')
+    $('#new-exercise-page input').val(null)
   })
   $('#create-exercise').on('submit', exerciseEvents.onCreateExercise)
 })
