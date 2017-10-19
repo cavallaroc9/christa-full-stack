@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events-auth')
+const exerciseEvents = require('./exercises/events-exercise')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -39,6 +40,7 @@ $(() => {
   $('#change-password-link').on('click', function () {
     $('#change-password-link').hide()
     $('#all-exercises-page').hide()
+    $('#new-exercise-page').hide()
     $('#change-password-page').show('swing')
   })
   $('#cancel-change-password').on('click', function () {
@@ -55,5 +57,18 @@ $(() => {
 
   // App
   $('#app-nav-bar').hide()
+
+  // Get all exercises
   $('#all-exercises-page').hide()
+  $('#add-exercise-btn').on('click', function () {
+    $('#all-exercises-page').hide()
+    $('#new-exercise-page').show('swing')
+  })
+  // Create Exercise
+  $('#new-exercise-page').hide()
+  $('#cancel-new-exercise').on('click', function () {
+    $('#new-exercise-page').hide()
+    $('#all-exercises-page').show('swing')
+  })
+  $('#create-exercise').on('submit', exerciseEvents.onCreateExercise)
 })
