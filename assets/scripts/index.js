@@ -58,6 +58,7 @@ $(() => {
 
   // Get all exercises
   $('#all-exercises-page').hide()
+  $('#get-exercises').on('click', exerciseEvents.onGetExercises)
   $('#add-exercise-btn').on('click', function () {
     $('#all-exercises-page').hide()
     $('#new-exercise-page').show('swing')

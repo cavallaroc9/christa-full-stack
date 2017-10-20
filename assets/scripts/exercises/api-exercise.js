@@ -14,6 +14,17 @@ const create = function (data) {
   })
 }
 
+const index = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/exercises',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
-  create
+  create,
+  index
 }
