@@ -2,8 +2,8 @@
 
 const config = {
   apiOrigins: {
-    development: 'http://localhost:4741/',
-    production: 'https://murmuring-beyond-57422.herokuapp.com/'
+    development: 'http://localhost:4741',
+    production: 'https://murmuring-beyond-57422.herokuapp.com'
   }
 }
 
