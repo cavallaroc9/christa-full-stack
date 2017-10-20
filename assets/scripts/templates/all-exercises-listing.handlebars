@@ -1,11 +1,11 @@
+{{#if exercises}}
 {{#each exercises as |exercise|}}
-{{#if exercise}}
 <a data-id="{{exercise.id}}" class="list-group-item">
   <h4 data-id="{{exercise.id}}" class="list-group-item-heading">{{exercise.name}}</h4>
   <p data-id="{{exercise.id}}" class="list-group-item-text">{{exercise.sets}} sets x {{exercise.reps}} reps x {{exercise.weight}} lbs</p>
   <small data-id="{{exercise.id}}" class="text-muted">{{exercise.notes}}</small>
 </a>
+{{/each}}
 {{else}}
 <h4>No Exercises...</h4>
 {{/if}}
-{{/each}}

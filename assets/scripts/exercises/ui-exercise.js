@@ -62,7 +62,9 @@ const showExerciseSuccess = function (data) {
   $('#edit-exercise-content').show()
   $('#edit-exercise-content').empty()
   $('#edit-exercise-content').append(showEditExerciseHtml)
+  $('#update-exercise').off()
   $('#update-exercise').on('submit', onUpdateExercise)
+  $('#delete-exercise').off()
   $('#delete-exercise').on('click', onDeleteExercise)
 }
 
