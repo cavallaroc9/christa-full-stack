@@ -39,6 +39,7 @@ $(() => {
     $('#change-password-link').hide()
     $('#all-exercises-page').hide()
     $('#new-exercise-page').hide()
+    $('#edit-exercise-page').hide()
     $('#change-password-page').show('swing')
   })
   $('#cancel-change-password').on('click', function () {
@@ -71,4 +72,12 @@ $(() => {
     $('#new-exercise-page input').val(null)
   })
   $('#create-exercise').on('submit', exerciseEvents.onCreateExercise)
+
+  // Show Exercise
+  $('#edit-exercise-page').hide()
+  $('#cancel-edit-exercise').on('click', function () {
+    $('#app-message').text('')
+    $('#edit-exercise-page').hide()
+    $('#all-exercises-page').show('swing')
+  })
 })

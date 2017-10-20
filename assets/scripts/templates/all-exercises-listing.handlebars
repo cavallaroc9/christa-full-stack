@@ -1,16 +1,11 @@
-<!--each, iterates through array. We are going to pass it an array. Need to call it exercises because that is what you called it in events.js  -->
+
+
 {{#each exercises as |exercise|}}
 
- <!-- Developers, why are we using data-id and not just id? -->
-  <!-- <ul data-id="{{exercise.id}}">
-    <li>
-      <small>Name: {{exercise.name}}</small>
-    </li>
-</ul> -->
-
 <a data-id="{{exercise.id}}" class="list-group-item">
-  <h4 class="list-group-item-heading">{{exercise.name}}</h4>
-  <p class="list-group-item-text">{{exercise.sets}} sets x {{exercise.reps}} reps x {{exercise.weight}} lbs</p>
-  <small class="text-muted">{{exercise.notes}}</small>
+  <h4 data-id="{{exercise.id}}" class="list-group-item-heading">{{exercise.name}}</h4>
+  <p data-id="{{exercise.id}}" class="list-group-item-text">{{exercise.sets}} sets x {{exercise.reps}} reps x {{exercise.weight}} lbs</p>
+  <small data-id="{{exercise.id}}" class="text-muted">{{exercise.notes}}</small>
 </a>
+
 {{/each}}

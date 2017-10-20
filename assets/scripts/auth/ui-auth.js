@@ -56,6 +56,7 @@ const signOutSuccess = function () {
   $('#change-password-page').hide()
   $('#all-exercises-page').hide()
   $('#new-exercise-page').hide()
+  $('#edit-exercise-page').hide()
   $('#auth-modules').show()
   $('#change-password input').val(null)
   $('#message').text('You have signed out successfully!')

@@ -19,6 +19,7 @@ const onGetExercises = (event) => {
     .then(ui.getExercisesSuccess)
     .catch(ui.getExercisesfailure)
 }
+
 module.exports = {
   onCreateExercise,
   onGetExercises
