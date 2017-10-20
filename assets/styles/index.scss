@@ -10,7 +10,7 @@ $btn-bg-color: #053444;
 $btn-primary-color: #228ae2;
 $btn-hover-bg-color: #095b77;
 $btn-margin-size-1: 10px;
-$font-type: arial;
+$font-type: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $hover-color:  #d4f4f7;
 $module-bg-color: #2dc8d7;
 $module-border: 2px solid #004d66;
@@ -40,13 +40,8 @@ body {
   padding-top: 10px;
 }
 
-.app-header-btn {
-  font-family: 'arial';
-}
-
 .app-title {
   color: $app-header-bg-color;
-  font-family: 'Silom';
   text-align: center;
 }
 

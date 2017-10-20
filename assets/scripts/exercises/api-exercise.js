@@ -24,7 +24,18 @@ const index = function () {
   })
 }
 
+const show = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/exercises/' + id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   create,
-  index
+  index,
+  show
 }
