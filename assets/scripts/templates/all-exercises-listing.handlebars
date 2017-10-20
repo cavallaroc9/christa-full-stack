@@ -1,5 +1,3 @@
-
-
 {{#each exercises as |exercise|}}
 {{#if exercise}}
 <a data-id="{{exercise.id}}" class="list-group-item">
@@ -8,6 +6,6 @@
   <small data-id="{{exercise.id}}" class="text-muted">{{exercise.notes}}</small>
 </a>
 {{else}}
-<p> You curren't don't have any exercises. Go ahead and add some! </p>
+<h4>No Exercises...</h4>
 {{/if}}
 {{/each}}

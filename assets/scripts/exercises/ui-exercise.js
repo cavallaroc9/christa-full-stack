@@ -8,15 +8,15 @@ const showEditExerciseTemplate = require('../templates/exercise-listing.handleba
 
 const createExerciseSuccess = function (data) {
   store.exercise = data.exercise
-  console.log('create exercise data is', data)
+  // console.log('create exercise data is', data)
   $('#new-exercise-page').hide()
   $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
   $('#get-exercises').show()
   $('#new-exercise-page input').val(null)
-  console.log('store exercise is', store.exercise)
-  console.log('store user is', store.user)
+  // console.log('store exercise is', store.exercise)
+  // console.log('store user is', store.user)
 }
 
 const createExerciseFailure = function (error) {
@@ -25,7 +25,7 @@ const createExerciseFailure = function (error) {
 }
 
 const getExercisesSuccess = (data) => {
-  console.log(data)
+  // console.log(data)
   const showExercisesHtml =
    showExercisesTemplate({ exercises: data.exercises })
   $('#all-exercises-content').show()
@@ -35,7 +35,7 @@ const getExercisesSuccess = (data) => {
   // When exercise is clicked, show edit view of resource
   // need show call
   $('#all-exercises-content').on('click', function (event) {
-    console.log('exercise content is', event.target.getAttribute('data-id'))
+    // console.log('exercise content is', event.target.getAttribute('data-id'))
     const exerciseId = event.target.getAttribute('data-id')
     onGetExerciseById(exerciseId)
   })
@@ -63,6 +63,7 @@ const showExerciseSuccess = function (data) {
   $('#edit-exercise-content').empty()
   $('#edit-exercise-content').append(showEditExerciseHtml)
   $('#update-exercise').on('submit', onUpdateExercise)
+  $('#delete-exercise').on('click', onDeleteExercise)
 }
 
 const showExerciseFailure = function () {
@@ -73,7 +74,7 @@ const showExerciseFailure = function () {
 const onUpdateExercise = function (event) {
   event.preventDefault()
   const formData = getFormFields(event.target)
-  console.log('onUpdate data is ', store.exercise)
+  console.log('onUpdateExercise data is ', store.exercise)
   api.update(formData)
     .then(updateExerciseSuccess)
     .catch(updateExerciseFailure)
@@ -88,11 +89,37 @@ const updateExerciseSuccess = function (data) {
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
   $('#get-exercises').show()
-  console.log('store exercise is', store.exercise)
-  console.log('store user is', store.user)
+  // console.log('store exercise is', store.exercise)
+  // console.log('store user is', store.user)
 }
 
 const updateExerciseFailure = function (error) {
+  console.log(error)
+  $('#app-message').text('Oops! Something went wrong. Please try again.')
+}
+
+const onDeleteExercise = function (event) {
+  event.preventDefault()
+  console.log('onDelete data is ', store.exercise)
+  api.destroy()
+    .then(deleteExerciseSuccess)
+    .catch(deleteExerciseFailure)
+}
+
+const deleteExerciseSuccess = function () {
+  store.exercise = {}
+  console.log('deleted exercise data is', store.exercise)
+  $('#edit-exercise-page').hide()
+  $('#edit-exercise-content').hide()
+  $('#app-message').hide()
+  $('#all-exercises-content').hide()
+  $('#all-exercises-page').show('swing')
+  $('#get-exercises').show()
+  // console.log('store exercise is', store.exercise)
+  // console.log('store user is', store.user)
+}
+
+const deleteExerciseFailure = function (error) {
   console.log(error)
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
@@ -101,5 +128,6 @@ module.exports = {
   createExerciseSuccess,
   createExerciseFailure,
   getExercisesSuccess,
-  getExercisesfailure
+  getExercisesfailure,
+  onDeleteExercise
 }
