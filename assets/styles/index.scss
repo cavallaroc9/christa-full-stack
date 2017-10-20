@@ -24,6 +24,13 @@ body {
   height: 100%;
 }
 
+.add-link {
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  padding-left: 15px;
+}
+
 .app-header {
   background-color: $app-header-bg-color;
   color: $white;

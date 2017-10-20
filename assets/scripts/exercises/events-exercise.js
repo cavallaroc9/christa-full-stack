@@ -13,6 +13,13 @@ const onCreateExercise = function (event) {
     .catch(ui.createExerciseFailure)
 }
 
+const onGetExercises = (event) => {
+  event.preventDefault()
+  api.index()
+    .then(ui.getExercisesSuccess)
+    .catch(ui.getExercisesfailure)
+}
 module.exports = {
-  onCreateExercise
+  onCreateExercise,
+  onGetExercises
 }
