@@ -34,8 +34,20 @@ const show = function (id) {
   })
 }
 
+const update = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/exercises/' + store.exercise.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
+
 module.exports = {
   create,
   index,
-  show
+  show,
+  update
 }

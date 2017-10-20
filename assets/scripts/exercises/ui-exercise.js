@@ -2,6 +2,7 @@
 
 const store = require('../store')
 const api = require('./api-exercise')
+const getFormFields = require(`../../../lib/get-form-fields`)
 const showExercisesTemplate = require('../templates/all-exercises-listing.handlebars')
 const showEditExerciseTemplate = require('../templates/exercise-listing.handlebars')
 
@@ -53,17 +54,46 @@ const onGetExerciseById = function (exerciseId) {
 }
 
 const showExerciseSuccess = function (data) {
+  store.exercise = data.exercise
   $('#all-exercises-page').hide()
   $('#edit-exercise-page').show('swing')
   console.log('show exercise data is', data)
   const showEditExerciseHtml = showEditExerciseTemplate({ exercise: data.exercise })
-  $('#edit-exercises-content').show()
-  $('#edit-exercises-content').empty()
-  $('#edit-exercises-content').append(showEditExerciseHtml)
+  $('#edit-exercise-content').show()
+  $('#edit-exercise-content').empty()
+  $('#edit-exercise-content').append(showEditExerciseHtml)
+  $('#update-exercise').on('submit', onUpdateExercise)
 }
 
 const showExerciseFailure = function () {
   console.log('it failed')
+  $('#app-message').text('Oops! Something went wrong. Please try again.')
+}
+
+const onUpdateExercise = function (event) {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  console.log('onUpdate data is ', store.exercise)
+  api.update(formData)
+    .then(updateExerciseSuccess)
+    .catch(updateExerciseFailure)
+}
+
+const updateExerciseSuccess = function (data) {
+  store.exercise = data.exercise
+  console.log('updated exercise data is', data)
+  $('#edit-exercise-page').hide()
+  $('#edit-exercise-content').hide()
+  $('#app-message').hide()
+  $('#all-exercises-content').hide()
+  $('#all-exercises-page').show('swing')
+  $('#get-exercises').show()
+  console.log('store exercise is', store.exercise)
+  console.log('store user is', store.user)
+}
+
+const updateExerciseFailure = function (error) {
+  console.log(error)
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 
