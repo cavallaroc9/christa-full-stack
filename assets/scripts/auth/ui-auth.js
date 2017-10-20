@@ -55,6 +55,7 @@ const signOutSuccess = function () {
   $('#app-nav-bar').hide()
   $('#change-password-page').hide()
   $('#all-exercises-page').hide()
+  $('#all-exercises-content').hide()
   $('#new-exercise-page').hide()
   $('#edit-exercise-page').hide()
   $('#auth-modules').show()
