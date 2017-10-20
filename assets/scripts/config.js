@@ -3,7 +3,7 @@
 const config = {
   apiOrigins: {
     development: 'http://localhost:4741/',
-    production: 'http://murmuring-beyond-57422.herokuapp.com/'
+    production: 'https://murmuring-beyond-57422.herokuapp.com/'
   }
 }
 
