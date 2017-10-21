@@ -21,7 +21,8 @@ const createExerciseSuccess = function (data) {
 
 const createExerciseFailure = function (error) {
   console.error(error)
-  $('#app-message').text('Oops! Something went wrong. Please try again. Note: "Name" is required.')
+  $('#app-message').show()
+  $('#app-message').text('Oops! Something went wrong. Please try again. Please note: name is required.')
 }
 
 const getExercisesSuccess = (data) => {
@@ -29,8 +30,8 @@ const getExercisesSuccess = (data) => {
   const showExercisesHtml =
    showExercisesTemplate({ exercises: data.exercises })
   $('#all-exercises-content').show()
-  $('#all-exercises-content').empty()
-  $('#all-exercises-content').append(showExercisesHtml)
+  // $('#all-exercises-content').empty()
+  $('#all-exercises-content').html(showExercisesHtml)
   $('#get-exercises').hide()
   // When exercise is clicked, show edit view of resource
   // need show call
@@ -60,8 +61,8 @@ const showExerciseSuccess = function (data) {
   console.log('show exercise data is', data)
   const showEditExerciseHtml = showEditExerciseTemplate({ exercise: data.exercise })
   $('#edit-exercise-content').show()
-  $('#edit-exercise-content').empty()
-  $('#edit-exercise-content').append(showEditExerciseHtml)
+  // $('#edit-exercise-content').empty()
+  $('#edit-exercise-content').html(showEditExerciseHtml)
   $('#update-exercise').off()
   $('#update-exercise').on('submit', onUpdateExercise)
   $('#delete-exercise').off()
@@ -97,7 +98,7 @@ const updateExerciseSuccess = function (data) {
 
 const updateExerciseFailure = function (error) {
   console.log(error)
-  $('#app-message').text('Oops! Something went wrong. Please try again.')
+  $('#app-message').text('Oops! Something went wrong. Please try again. Please note: name is required.')
 }
 
 const onDeleteExercise = function (event) {
