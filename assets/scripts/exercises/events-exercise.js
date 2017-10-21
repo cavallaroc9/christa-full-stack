@@ -43,11 +43,26 @@ const onShowEditExercise = (event) => {
   onGetExerciseById(exerciseId)
 }
 
-const onGetExerciseById = function (exerciseId) {
+const onGetExerciseById = (exerciseId) => {
   event.preventDefault()
   api.show(exerciseId)
     .then(ui.showExerciseSuccess)
     .catch(ui.showExerciseFailure)
+}
+
+const onUpdateExercise = (event) => {
+  event.preventDefault()
+  const formData = getFormFields(event.target)
+  api.update(formData)
+    .then(ui.updateExerciseSuccess)
+    .catch(ui.updateExerciseFailure)
+}
+
+const onDeleteExercise = function (event) {
+  event.preventDefault()
+  api.destroy()
+    .then(ui.deleteExerciseSuccess)
+    .catch(ui.deleteExerciseFailure)
 }
 
 const addHandlers = () => {
@@ -57,6 +72,8 @@ const addHandlers = () => {
   $('#cancel-new-exercise').on('click', onHideAddExercise)
   $('#cancel-edit-exercise').on('click', onHideEditExercise)
   $('#all-exercises-content').on('click', onShowEditExercise)
+  $('#update-exercise').on('submit', onUpdateExercise)
+  $('#delete-exercise').on('click', onDeleteExercise)
 }
 module.exports = {
   addHandlers

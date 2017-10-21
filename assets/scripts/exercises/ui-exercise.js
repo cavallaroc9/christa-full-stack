@@ -66,10 +66,10 @@ const showExerciseSuccess = function (data) {
   $('#edit-exercise-content').show()
   // $('#edit-exercise-content').empty()
   $('#edit-exercise-content').html(showEditExerciseHtml)
-  $('#update-exercise').off()
-  $('#update-exercise').on('submit', onUpdateExercise)
-  $('#delete-exercise').off()
-  $('#delete-exercise').on('click', onDeleteExercise)
+  // $('#update-exercise').off()
+  // $('#update-exercise').on('submit', onUpdateExercise)
+  // $('#delete-exercise').off()
+  // $('#delete-exercise').on('click', onDeleteExercise)
 }
 
 const showExerciseFailure = function () {
@@ -77,14 +77,14 @@ const showExerciseFailure = function () {
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 
-const onUpdateExercise = function (event) {
-  event.preventDefault()
-  const formData = getFormFields(event.target)
-  console.log('onUpdateExercise data is ', store.exercise)
-  api.update(formData)
-    .then(updateExerciseSuccess)
-    .catch(updateExerciseFailure)
-}
+// const onUpdateExercise = function (event) {
+//   event.preventDefault()
+//   const formData = getFormFields(event.target)
+//   console.log('onUpdateExercise data is ', store.exercise)
+//   api.update(formData)
+//     .then(updateExerciseSuccess)
+//     .catch(updateExerciseFailure)
+// }
 
 const updateExerciseSuccess = function (data) {
   store.exercise = data.exercise
@@ -104,13 +104,13 @@ const updateExerciseFailure = function (error) {
   $('#app-message').text('Oops! Something went wrong. Please try again. Please note: name is required.')
 }
 
-const onDeleteExercise = function (event) {
-  event.preventDefault()
-  console.log('onDelete data is ', store.exercise)
-  api.destroy()
-    .then(deleteExerciseSuccess)
-    .catch(deleteExerciseFailure)
-}
+// const onDeleteExercise = function (event) {
+//   event.preventDefault()
+//   console.log('onDelete data is ', store.exercise)
+//   api.destroy()
+//     .then(deleteExerciseSuccess)
+//     .catch(deleteExerciseFailure)
+// }
 
 const deleteExerciseSuccess = function () {
   store.exercise = {}
@@ -133,9 +133,12 @@ const deleteExerciseFailure = function (error) {
 module.exports = {
   createExerciseSuccess,
   createExerciseFailure,
-  showExerciseSuccess,
-  showExerciseFailure,
   getExercisesSuccess,
   getExercisesfailure,
-  onDeleteExercise
+  showExerciseSuccess,
+  showExerciseFailure,
+  updateExerciseSuccess,
+  updateExerciseFailure,
+  deleteExerciseSuccess,
+  deleteExerciseFailure
 }
