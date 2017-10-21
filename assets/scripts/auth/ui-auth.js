@@ -62,7 +62,7 @@ const signOutSuccess = function () {
   $('#auth-modules').show()
   $('#change-password input').val(null)
   $('#message').text('You have signed out successfully!')
-  $('app-message').text('')
+  $('#app-message').text('')
   console.log(store.user)
 }
 

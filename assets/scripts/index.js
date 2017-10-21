@@ -16,45 +16,9 @@ $(() => {
 // require('./example')
 
 $(() => {
-  // Sign Up
+  authEvents.addHandlers()
   $('#sign-up-div').hide()
-  $('#sign-up-link').on('click', function () {
-    $('#sign-in-div').hide()
-    $('#sign-in input').val(null)
-    $('#sign-up-div').show()
-    $('#message').text('')
-  })
-  $('#sign-up').on('submit', authEvents.onSignUp)
-  // Sign In
-  $('#sign-in-link').on('click', function () {
-    $('#sign-up-div').hide()
-    $('#sign-up input').val(null)
-    $('#sign-in-div').show()
-    $('#message').text('')
-  })
-  $('#sign-in').on('submit', authEvents.onSignIn)
-  // Change password
   $('#change-password-page').hide()
-  $('#change-password-link').on('click', function () {
-    $('#change-password-link').hide()
-    $('#all-exercises-page').hide()
-    $('#new-exercise-page').hide()
-    $('#edit-exercise-page').hide()
-    $('#change-password-page').show('swing')
-  })
-  $('#cancel-change-password').on('click', function () {
-    $('#app-message').text('')
-    $('#change-password-page').hide()
-    $('#change-password-page input').val(null)
-    $('#change-password-link').show()
-    $('#all-exercises-page').show('swing')
-  })
-  $('#change-password').on('submit', authEvents.onChangePassword)
-
-  // Sign Out
-  $('#sign-out-link').on('click', authEvents.onSignOut)
-
-  // App
   $('#app-nav-bar').hide()
 
   // Get all exercises
