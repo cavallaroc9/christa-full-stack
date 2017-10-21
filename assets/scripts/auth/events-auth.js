@@ -38,9 +38,47 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onShowSignUp = function () {
+  $('#sign-in-div').hide()
+  $('#sign-in input').val(null)
+  $('#sign-up-div').show()
+  $('#message').text('')
+}
+
+const onShowSignIn = function () {
+  $('#sign-up-div').hide()
+  $('#sign-up input').val(null)
+  $('#sign-in-div').show()
+  $('#message').text('')
+}
+
+const onShowChangePassword = function () {
+  $('#change-password-link').hide()
+  $('#all-exercises-page').hide()
+  $('#new-exercise-page').hide()
+  $('#edit-exercise-page').hide()
+  $('#change-password-page').show('swing')
+}
+
+const onHideChangePassword = function () {
+  $('#app-message').text('')
+  $('#change-password-page').hide()
+  $('#change-password-page input').val(null)
+  $('#change-password-link').show()
+  $('#all-exercises-page').show('swing')
+}
+
+const addHandlers = () => {
+  $('#sign-up').on('submit', onSignUp)
+  $('#sign-in').on('submit', onSignIn)
+  $('#sign-out-link').on('click', onSignOut)
+  $('#change-password').on('submit', onChangePassword)
+  $('#sign-up-link').on('click', onShowSignUp)
+  $('#sign-in-link').on('click', onShowSignIn)
+  $('#change-password-link').on('click', onShowChangePassword)
+  $('#cancel-change-password').on('click', onHideChangePassword)
+}
+
 module.exports = {
-  onSignUp,
-  onSignIn,
-  onChangePassword,
-  onSignOut
+  addHandlers
 }
