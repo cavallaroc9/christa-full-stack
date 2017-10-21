@@ -20,28 +20,29 @@ $(() => {
   $('#sign-up-div').hide()
   $('#change-password-page').hide()
   $('#app-nav-bar').hide()
+  exerciseEvents.addHandlers()
 
   // Get all exercises
   $('#all-exercises-page').hide()
-  $('#get-exercises').on('click', exerciseEvents.onGetExercises)
-  $('#add-exercise-btn').on('click', function () {
-    $('#all-exercises-page').hide()
-    $('#new-exercise-page').show('swing')
-  })
+  // $('#get-exercises').on('click', exerciseEvents.onGetExercises)
+  // $('#add-exercise-btn').on('click', function () {
+  //   $('#all-exercises-page').hide()
+  //   $('#new-exercise-page').show('swing')
+  // })
   // Create Exercise
   $('#new-exercise-page').hide()
-  $('#cancel-new-exercise').on('click', function () {
-    $('#new-exercise-page').hide()
-    $('#all-exercises-page').show('swing')
-    $('#new-exercise-page input').val(null)
-  })
-  $('#create-exercise').on('submit', exerciseEvents.onCreateExercise)
+  // $('#cancel-new-exercise').on('click', function () {
+  //   $('#new-exercise-page').hide()
+  //   $('#all-exercises-page').show('swing')
+  //   $('#new-exercise-page input').val(null)
+  // })
+  // $('#create-exercise').on('submit', exerciseEvents.onCreateExercise)
 
   // Show Exercise
   $('#edit-exercise-page').hide()
-  $('#cancel-edit-exercise').on('click', function () {
-    $('#app-message').text('')
-    $('#edit-exercise-page').hide()
-    $('#all-exercises-page').show('swing')
-  })
+  // $('#cancel-edit-exercise').on('click', function () {
+  //   $('#app-message').text('')
+  //   $('#edit-exercise-page').hide()
+  //   $('#all-exercises-page').show('swing')
+  // })
 })

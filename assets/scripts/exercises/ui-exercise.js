@@ -15,6 +15,8 @@ const createExerciseSuccess = function (data) {
   $('#all-exercises-page').show('swing')
   $('#get-exercises').show()
   $('#new-exercise-page input').val(null)
+  $('#app-message').show()
+  $('#app-message').text('Your exercise was succussfully added!')
   // console.log('store exercise is', store.exercise)
   // console.log('store user is', store.user)
 }
@@ -27,19 +29,20 @@ const createExerciseFailure = function (error) {
 
 const getExercisesSuccess = (data) => {
   // console.log(data)
+  $('#app-message').hide()
+  $('#get-exercises').hide()
   const showExercisesHtml =
    showExercisesTemplate({ exercises: data.exercises })
   $('#all-exercises-content').show()
   // $('#all-exercises-content').empty()
   $('#all-exercises-content').html(showExercisesHtml)
-  $('#get-exercises').hide()
   // When exercise is clicked, show edit view of resource
   // need show call
-  $('#all-exercises-content').on('click', function (event) {
-    // console.log('exercise content is', event.target.getAttribute('data-id'))
-    const exerciseId = event.target.getAttribute('data-id')
-    onGetExerciseById(exerciseId)
-  })
+  // $('#all-exercises-content').on('click', function (event) {
+  //   // console.log('exercise content is', event.target.getAttribute('data-id'))
+  //   const exerciseId = event.target.getAttribute('data-id')
+  //   onGetExerciseById(exerciseId)
+  // })
 }
 
 const getExercisesfailure = (error) => {
@@ -47,12 +50,12 @@ const getExercisesfailure = (error) => {
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 
-const onGetExerciseById = function (exerciseId) {
-  event.preventDefault()
-  api.show(exerciseId)
-    .then(showExerciseSuccess)
-    .catch(showExerciseFailure)
-}
+// const onGetExerciseById = function (exerciseId) {
+//   event.preventDefault()
+//   api.show(exerciseId)
+//     .then(showExerciseSuccess)
+//     .catch(showExerciseFailure)
+// }
 
 const showExerciseSuccess = function (data) {
   store.exercise = data.exercise
@@ -130,6 +133,8 @@ const deleteExerciseFailure = function (error) {
 module.exports = {
   createExerciseSuccess,
   createExerciseFailure,
+  showExerciseSuccess,
+  showExerciseFailure,
   getExercisesSuccess,
   getExercisesfailure,
   onDeleteExercise
