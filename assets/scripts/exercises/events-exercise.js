@@ -7,7 +7,7 @@ const ui = require('./ui-exercise')
 const onCreateExercise = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log(data)
+  // console.log(data)
   api.create(data)
     .then(ui.createExerciseSuccess)
     .catch(ui.createExerciseFailure)
@@ -21,26 +21,29 @@ const onGetExercises = (event) => {
 }
 
 const onShowAddExercise = () => {
+  $('#app-message').hide()
   $('#all-exercises-page').hide()
   $('#new-exercise-page').show('swing')
 }
 
 const onHideAddExercise = () => {
+  $('#app-message').hide()
   $('#new-exercise-page').hide()
   $('#all-exercises-page').show('swing')
   $('#new-exercise-page input').val(null)
 }
 
 const onHideEditExercise = () => {
-  $('#app-message').text('')
+  $('#app-message').hide()
   $('#edit-exercise-page').hide()
   $('#all-exercises-page').show('swing')
 }
 
 const onShowEditExercise = (event) => {
   const exerciseId = event.target.getAttribute('data-id')
-  console.log('exerciseID', exerciseId)
+  // console.log('exerciseID', exerciseId)
   onGetExerciseById(exerciseId)
+  $('#app-message').hide()
 }
 
 const onGetExerciseById = (exerciseId) => {
