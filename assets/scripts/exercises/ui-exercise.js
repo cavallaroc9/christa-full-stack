@@ -22,7 +22,7 @@ const createExerciseSuccess = function (data) {
 const createExerciseFailure = function (error) {
   console.error(error)
   $('#app-message').show()
-  $('#app-message').text('Oops! Something went wrong. Please try again. Please note: name is required.')
+  $('#app-message').text('Oops! Something went wrong. Please try again. Please note that some fields are required.')
 }
 
 const getExercisesSuccess = (data) => {
@@ -35,29 +35,32 @@ const getExercisesSuccess = (data) => {
   $('#all-exercises-content').html(showExercisesHtml)
 }
 
-const getExercisesfailure = (error) => {
-  console.error(error)
+const getExercisesfailure = () => {
+  // console.error(error)
+  $('#app-message').show()
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 
 const showExerciseSuccess = function (data) {
   store.exercise = data.exercise
   $('#all-exercises-page').hide()
+  $('#app-message').hide()
   $('#edit-exercise-page').show('swing')
-  console.log('show exercise data is', data)
+  // console.log('show exercise data is', data)
   const showEditExerciseHtml = showEditExerciseTemplate({ exercise: data.exercise })
   $('#edit-exercise-content').show()
   $('#edit-exercise-content').html(showEditExerciseHtml)
 }
 
 const showExerciseFailure = function () {
-  console.log('it failed')
+  // console.log('it failed')
+  $('#app-message').show()
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 
 const updateExerciseSuccess = function (data) {
   store.exercise = data.exercise
-  console.log('updated exercise data is', data)
+  // console.log('updated exercise data is', data)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
   $('#app-message').hide()
@@ -68,26 +71,30 @@ const updateExerciseSuccess = function (data) {
   // console.log('store user is', store.user)
 }
 
-const updateExerciseFailure = function (error) {
-  console.log(error)
-  $('#app-message').text('Oops! Something went wrong. Please try again. Please note: name is required.')
+const updateExerciseFailure = function () {
+  // console.log(error)
+  $('#app-message').show()
+  $('#app-message').text('Oops! Something went wrong. Please try again. Please note that some fields are required.')
 }
 
 const deleteExerciseSuccess = function () {
   store.exercise = {}
-  console.log('deleted exercise data is', store.exercise)
+  // console.log('deleted exercise data is', store.exercise)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
   $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
   $('#get-exercises').show()
+  $('#app-message').show()
+  $('#app-message').text('Your exercise was succussfully deleted!')
   // console.log('store exercise is', store.exercise)
   // console.log('store user is', store.user)
 }
 
-const deleteExerciseFailure = function (error) {
-  console.log(error)
+const deleteExerciseFailure = function () {
+  // console.log(error)
+  $('#app-message').show()
   $('#app-message').text('Oops! Something went wrong. Please try again.')
 }
 

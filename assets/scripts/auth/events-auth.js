@@ -7,7 +7,7 @@ const ui = require('./ui-auth')
 const onSignUp = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log(data)
+  // console.log(data)
   api.signUp(data)
     .then(ui.signUpSuccess)
     .catch(ui.signUpFailure)
@@ -16,7 +16,7 @@ const onSignUp = function (event) {
 const onSignIn = function (event) {
   const data = getFormFields(this)
   event.preventDefault()
-  console.log(data)
+  // console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
     .catch(ui.signInFailure)
@@ -53,6 +53,7 @@ const onShowSignIn = function () {
 }
 
 const onShowChangePassword = function () {
+  $('#app-message').hide()
   $('#change-password-link').hide()
   $('#all-exercises-page').hide()
   $('#new-exercise-page').hide()
@@ -61,7 +62,7 @@ const onShowChangePassword = function () {
 }
 
 const onHideChangePassword = function () {
-  $('#app-message').text('')
+  $('#app-message').hide()
   $('#change-password-page').hide()
   $('#change-password-page input').val(null)
   $('#change-password-link').show()
