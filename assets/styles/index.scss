@@ -4,22 +4,22 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 $app-header-bg-color: #33bfe0;
 $app-bg-color: #4450b2;
-$app-red: #fa513b;
+$app-red: #da568a;
+$app-red-hover: #ff64a1;
 $background-color: #22285a;
 $black: #000;
 $box-border: #fff solid 5px;
 $btn-bg-color: #053444;
-$btn-primary-bg-color: #88f5be;
+$btn-primary-bg-color: #70bae4;
 $btn-primary-color: #0b934d;
-$btn-primary-hover-bg: #4ac386;
+$btn-primary-hover-bg: #84cbf3;
 $btn-hover-bg-color: #4aea99;
 $btn-margin-size-1: 10px;
 $font-type: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $feedback-color: #fd795a;
-$grad1color1: #0fb8ad;
-$grad1color2: #1fc8db;
-$grad1color3: #2cb5e8;
-$gradient1: linear-gradient(141deg, $grad1color1 0%, $grad1color2 51%, $grad1color3 75%);
+$grad1color1: #ec77ab;
+$grad1color2: #7873f5;
+$gradient1: linear-gradient(to right, $grad1color1 0%, $grad1color2 100%);
 $hover-color:  #d4f4f7;
 $list-bg-color: #4450b2;
 $list-border-color: #293660;
@@ -36,6 +36,7 @@ $white: #fff;
 
 body {
   background-color: $background-color;
+  // background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   color: $off-white;
   font-family: $font-type;
   height: 100%;
@@ -45,6 +46,10 @@ body {
 label {
   color: $off-white;
   font-size: 18px;
+}
+
+legend {
+  border: 0;
 }
 
 a.list-group-item {
@@ -89,7 +94,6 @@ a.list-group-item .list-group-item-heading {
 }
 
 .app-header {
-  // background-color: $app-header-bg-color;
   background-image: $gradient1;
   color: $white;
   font-size: 20px;
@@ -117,12 +121,16 @@ a.list-group-item .list-group-item-heading {
 
 .btn-danger {
   background-color: $app-red;
+
+  &:hover {
+    background-color: $app-red-hover;
+  }
 }
 
 .btn-primary {
   background-color: $btn-primary-bg-color;
   border: 0;
-  color: $btn-primary-color;
+  color: $white;
 
   &:hover {
     background-color: $btn-primary-hover-bg;
@@ -152,7 +160,7 @@ a.list-group-item .list-group-item-heading {
 }
 
 .feedback-message {
-  background-color: $feedback-color;
+  background-color: $background-color;
   color: $white;
 }
 
@@ -201,11 +209,13 @@ a.list-group-item .list-group-item-heading {
 }
 
 .navbar-default {
-  background-color: $nav-color;
+  // background-color: $nav-color;
+  background-image: $gradient1;
   border-color: $nav-color;
 
   .navbar-brand {
     color: $white;
+    font-weight: bold;
 
     &:hover {
       color: $white;
@@ -239,7 +249,7 @@ a.list-group-item .list-group-item-heading {
   display: block;
   font-size: 18px;
   margin: 3% auto;
-  padding: 1% 20%;
+  padding: 2% 20%;
 }
 
 .no-exercises {
