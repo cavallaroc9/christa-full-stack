@@ -1,7 +1,6 @@
 'use strict'
 
 const store = require('../store')
-// const boardEvents = require('../game-board/events')
 
 const signUpSuccess = function (data) {
   // console.log(data)
@@ -27,9 +26,6 @@ const signInSuccess = function (data) {
   $('#get-exercises').show()
   $('#app-nav-bar').show()
   $('#change-password-link').show()
-  // $('#change-password-button').show()
-  // $('#create-button').show()
-  // $('#message').text('Signed in as ' + store.user.email)
 }
 
 const signInFailure = function () {
