@@ -16,7 +16,10 @@ $btn-hover-bg-color: #4aea99;
 $btn-margin-size-1: 10px;
 $font-type: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $feedback-color: #fd795a;
-$gradient1: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+$grad1color1: #0fb8ad;
+$grad1color2: #1fc8db;
+$grad1color3: #2cb5e8;
+$gradient1: linear-gradient(141deg, $grad1color1 0%, $grad1color2 51%, $grad1color3 75%);
 $hover-color:  #d4f4f7;
 $list-bg-color: #4450b2;
 $list-border-color: #293660;
@@ -26,6 +29,8 @@ $module-border: 2px solid #004d66;
 $nav-color: #4658e2;
 $nav-hover-color: #5d6ffd;
 $off-white: #d9d9e4;
+$text-shadow1: #c7bebe;
+$text-shadow2: #ebecf1;
 $white: #fff;
 
 
@@ -96,17 +101,22 @@ a.list-group-item .list-group-item-heading {
 .app-title {
   color: $background-color;
   text-align: center;
-  text-shadow: 1px 1px 2px #c7bebe, 0 0 25px white, 0 0 5px #ebecf1;
+  text-shadow: 1px 1px 2px $text-shadow1, 0 0 25px $white, 0 0 5px $text-shadow2;
 
 }
 
 .btn-secondary {
-  background-color: #808080;
+  background-color: $nav-color;
   color: $white;
+
+  &:hover {
+    background-color: $nav-hover-color;
+    color: $white;
+  }
 }
 
 .btn-danger {
-  background-color: #e54419;
+  background-color: $app-red;
 }
 
 .btn-primary {
@@ -145,8 +155,6 @@ a.list-group-item .list-group-item-heading {
   background-color: $feedback-color;
   color: $white;
 }
-
-
 
 .header {
   clear: both;
@@ -216,6 +224,7 @@ a.list-group-item .list-group-item-heading {
     .icon-bar {
       background-color: $white;
     }
+
     &:hover {
       background-color: $nav-hover-color;
     }
@@ -255,7 +264,7 @@ a.list-group-item .list-group-item-heading {
 .sign-in-module {
   // background-color: $app-header-bg-color;
   background-image: $gradient1;
-  border: $module-border;
+  border: 0;
   float: none;
   margin: 5% auto;
   padding: 22px;
