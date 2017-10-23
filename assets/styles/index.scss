@@ -3,25 +3,29 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css';
 
 $app-header-bg-color: #33bfe0;
-$app-bg-color: #344487;
-$app-red: #e54419;
-$background-color: #1e2c53;
+$app-bg-color: #4450b2;
+$app-red: #fa513b;
+$background-color: #22285a;
 $black: #000;
 $box-border: #fff solid 5px;
 $btn-bg-color: #053444;
-$btn-primary-bg-color: #45f79d;
+$btn-primary-bg-color: #88f5be;
 $btn-primary-color: #0b934d;
-$btn-hover-bg-color: #095b77;
+$btn-primary-hover-bg: #4ac386;
+$btn-hover-bg-color: #4aea99;
 $btn-margin-size-1: 10px;
 $font-type: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$feedback-color: #fd795a;
+$gradient1: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
 $hover-color:  #d4f4f7;
-$list-bg-color: #2c3b6d;
+$list-bg-color: #4450b2;
 $list-border-color: #293660;
+$list-hover-bg: #5b6cf1;
 $module-bg-color: #2dc8d7;
 $module-border: 2px solid #004d66;
-$nav-color: #4551c9;
+$nav-color: #4658e2;
+$nav-hover-color: #5d6ffd;
 $off-white: #d9d9e4;
-$text-muted-color: #949292;
 $white: #fff;
 
 
@@ -34,22 +38,31 @@ body {
 }
 
 label {
-  color: $app-header-bg-color;
+  color: $off-white;
   font-size: 18px;
 }
 
 a.list-group-item {
   background-color: $list-bg-color;
-  border-bottom-width: 3px;
-  border-color: $list-border-color;
-  color: $off-white;
+  border: 0;
+  color: $white;
   font-size: 18px;
+  margin: 3px 0;
   padding: 20px;
+
+  &:hover {
+    background-color: $list-hover-bg;
+    color: $off-white;
+  }
 }
 
 a.list-group-item .list-group-item-heading {
   color: $btn-primary-bg-color;
   font-size: 20px;
+}
+
+.asterisk {
+  color: $app-red;
 }
 
 .add-link {
@@ -71,21 +84,20 @@ a.list-group-item .list-group-item-heading {
 }
 
 .app-header {
-  background-color: $app-header-bg-color;
+  // background-color: $app-header-bg-color;
+  background-image: $gradient1;
   color: $white;
   font-size: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding-bottom: 10px;
   padding-top: 10px;
 }
 
 .app-title {
-  color: $app-header-bg-color;
+  color: $background-color;
   text-align: center;
-}
+  text-shadow: 1px 1px 2px #c7bebe, 0 0 25px white, 0 0 5px #ebecf1;
 
-.border {
-  border-color: $white;
 }
 
 .btn-secondary {
@@ -101,6 +113,10 @@ a.list-group-item .list-group-item-heading {
   background-color: $btn-primary-bg-color;
   border: 0;
   color: $btn-primary-color;
+
+  &:hover {
+    background-color: $btn-primary-hover-bg;
+  }
 }
 
 .cancel-link {
@@ -123,6 +139,11 @@ a.list-group-item .list-group-item-heading {
   font-size: 18px;
   margin: 3% auto;
   padding: 1% 15%;
+}
+
+.feedback-message {
+  background-color: $feedback-color;
+  color: $white;
 }
 
 
@@ -168,36 +189,36 @@ a.list-group-item .list-group-item-heading {
 }
 
 .navbar {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 .navbar-default {
   background-color: $nav-color;
   border-color: $nav-color;
-}
 
-.navbar-default .navbar-brand {
-  color: $white;
-}
-
-.navbar-default .navbar-toggle {
-  &:hover {
-    background-color: $list-bg-color;
+  .navbar-brand {
+    color: $white;
   }
-}
 
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: $white;
-}
+  .navbar-nav > li > a {
+    color: $white;
+    cursor: pointer;
+    font-size: 18px;
+    text-decoration: none;
 
-.navbar-default .navbar-nav > li > a {
-  color: $white;
-  cursor: pointer;
-  font-size: 18px;
-  text-decoration: none;
+    &:hover {
+      background-color: $nav-hover-color;
+      color: $hover-color;
+    }
+  }
 
-  &:hover {
-    color: $hover-color;
+  .navbar-toggle {
+    .icon-bar {
+      background-color: $white;
+    }
+    &:hover {
+      background-color: $nav-hover-color;
+    }
   }
 }
 
@@ -232,7 +253,8 @@ a.list-group-item .list-group-item-heading {
 }
 
 .sign-in-module {
-  background-color: $app-header-bg-color;
+  // background-color: $app-header-bg-color;
+  background-image: $gradient1;
   border: $module-border;
   float: none;
   margin: 5% auto;
@@ -241,6 +263,6 @@ a.list-group-item .list-group-item-heading {
 }
 
 .text-muted {
-  color: $text-muted-color;
+  color: $off-white;
   font-size: 15px;
 }
