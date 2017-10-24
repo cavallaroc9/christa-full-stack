@@ -23,6 +23,7 @@ $gradient1: linear-gradient(to right, $grad1color1 0%, $grad1color2 100%);
 $hover-color:  #d4f4f7;
 $list-bg-color: #4450b2;
 $list-border-color: #293660;
+$list-header-color: #73c0ec;
 $list-hover-bg: #5b6cf1;
 $module-bg-color: #2dc8d7;
 $module-border: 2px solid #004d66;
@@ -73,7 +74,7 @@ a.list-group-item {
 }
 
 a.list-group-item .list-group-item-heading {
-  color: $btn-primary-bg-color;
+  color: $list-header-color;
   font-size: 20px;
 }
 
