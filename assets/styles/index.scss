@@ -37,7 +37,6 @@ $white: #fff;
 
 body {
   background-color: $background-color;
-  // background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
   color: $off-white;
   font-family: $font-type;
   height: 100%;
@@ -293,7 +292,6 @@ a.list-group-item .list-group-item-heading {
 }
 
 .sign-in-module {
-  // background-color: $app-header-bg-color;
   background-image: $gradient1;
   border: 0;
   float: none;
