@@ -209,9 +209,11 @@ a.list-group-item .list-group-item-heading {
 }
 
 .navbar-default {
-  // background-color: $nav-color;
   background-image: $gradient1;
-  border-color: $nav-color;
+  border-bottom-color: $off-white;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
 
   .navbar-brand {
     color: $white;
@@ -248,8 +250,8 @@ a.list-group-item .list-group-item-heading {
 .new-btn {
   display: block;
   font-size: 18px;
-  margin: 3% auto;
-  padding: 2% 20%;
+  margin: 30px auto;
+  padding: 12px 55px;
 }
 
 .no-exercises {
