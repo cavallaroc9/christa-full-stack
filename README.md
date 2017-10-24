@@ -8,21 +8,25 @@ https://murmuring-beyond-57422.herokuapp.com
 https://cavallaroc9.github.io/christa-full-stack/
 
 # App Description
-This app is an exercise tracker that is a great alternative to bringing a notebook to the gym! Once logged in, you can add a list of your favorite exercises and view them all at once. This app allows you to easily update an exercise if you need to make a change, or delete the exercise all together. This exercise tracker will remember all of your updates, so you can pick up where you left off next time you log in. You also have the ability to change your password once logged in. This is all done through ajax requests made to the backend API.
+This app is an exercise tracker that is a great alternative to bringing a notebook to the gym! Once logged into the app, you can add a list of your favorite exercises and view them all at once. This app allows you to easily update an exercise if you need to make a change, or delete the exercise all together. This exercise tracker will remember all of your updates, so you can pick up where you left off next time you log in. You also have the ability to change your password once logged in. This is all done through ajax requests made to the backend API. The app also has a responsive web design which makes it easy to use on a mobile device.
 
-## Technologies Used
+# Technologies Used
 * HTML
 * CSS
 * SASS
 * Handlebars
 * Javascript
 * jQuery
+* Bootstrap
 
-## Unsolved Problems
-Currntly do not have any unsolved problems. What I would like to do in a future iteration is add a workouts table. That way a user can have many workouts, and each workout has many exercises.
+# Unsolved Problems
+Currently this app is mobile friendly. I would like to improve the experience on desktop in a future iteration. I designed this app for mobile first because I see this app used more commonly from a mobile device.
+
+What I would also like to do in a future iteration is add a workouts table. This would allow a user to have many workouts, and each workout could have many exercises.
+
+Finally, the third item I would like to improve is the ordering of the exercise list. When an exercise is updated, it gets moved to the bottom of the list. I would like the order to remain the same, even after it gets updated.
 
 # Planning, development process and problem-solving strategy (Client Only)
-Document your planning and tell a story about your development process and problem-solving strategy.
 
 ### Planning and Development Process
 * Created wireframes for the app
@@ -43,13 +47,10 @@ Document your planning and tell a story about your development process and probl
 ### Problem Solving Strategy
 * If I ran into any issues, I remembered to break the problem into very small peices so that it was easier to understand and solve. If I didn't know what was causing the issue, I would start from the beginning, and use console logging to figure out what functions were getting called and what data was getting returned. Console logging was very helpful in allowing me to troubleshoot the root cause of an issue. If I ran into an issue that I was not familiar with, I used google and class examples.
 
-
 # Wireframes
 https://imgur.com/SKgZnMg
 
-
 # User Stories
-
 - As a user, I would like to be able to login so that I can record my exercises.
 - As a user, I would like to be able to sign up for an account to I can log into the app.
 - As a user, I would like to be able to change my password once logged in so my account is secure.
