@@ -16,7 +16,7 @@ $btn-primary-hover-bg: #84cbf3;
 $btn-hover-bg-color: #4aea99;
 $btn-margin-size-1: 10px;
 $font-type: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$feedback-color: #fd795a;
+$feedback-bg-color: #6e9cd5;
 $grad1color1: #ec77ab;
 $grad1color2: #7873f5;
 $gradient1: linear-gradient(to right, $grad1color1 0%, $grad1color2 100%);
@@ -87,6 +87,12 @@ a.list-group-item .list-group-item-heading {
   border: 0;
   cursor: pointer;
   padding-right: 15px;
+}
+
+.alert-message {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .app-form {
@@ -167,8 +173,10 @@ a.list-group-item .list-group-item-heading {
 }
 
 .feedback-message {
-  background-color: $background-color;
+  background-color: $feedback-bg-color;
   color: $white;
+  font-weight: bold;
+  padding: 13px;
 }
 
 .header {
@@ -296,5 +304,5 @@ a.list-group-item .list-group-item-heading {
 
 .text-muted {
   color: $off-white;
-  font-size: 15px;
+  font-size: 13px;
 }

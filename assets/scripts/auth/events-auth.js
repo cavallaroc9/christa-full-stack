@@ -1,8 +1,9 @@
 'use strict'
 
-const getFormFields = require(`../../../lib/get-form-fields`)
+const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api-auth')
 const ui = require('./ui-auth')
+const exerciseEvents = require('../exercises/events-exercise')
 
 const onSignUp = function (event) {
   const data = getFormFields(this)
@@ -19,6 +20,7 @@ const onSignIn = function (event) {
   // console.log(data)
   api.signIn(data)
     .then(ui.signInSuccess)
+    .then(exerciseEvents.onGetExercises)
     .catch(ui.signInFailure)
 }
 
