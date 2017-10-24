@@ -1,6 +1,6 @@
 'use strict'
 
-const getFormFields = require(`../../../lib/get-form-fields`)
+const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api-exercise')
 const ui = require('./ui-exercise')
 
@@ -76,7 +76,6 @@ const onDeleteExercise = function (event) {
 
 const addHandlers = () => {
   $('#create-exercise').on('submit', onCreateExercise)
-  // $('#get-exercises').on('click', onGetExercises)
   $('#add-exercise-btn').on('click', onShowAddExercise)
   $('#cancel-new-exercise').on('click', onHideAddExercise)
   $('#cancel-edit-exercise').on('click', onHideEditExercise)

@@ -10,7 +10,6 @@ const createExerciseSuccess = function (data) {
   $('#new-exercise-page').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  // $('#get-exercises').show()
   $('#new-exercise-page input').val(null)
   $('#app-message').show()
   $('#app-message').text('Your exercise was succussfully added!')
@@ -26,8 +25,6 @@ const createExerciseFailure = function () {
 
 const getExercisesSuccess = (data) => {
   // console.log(data)
-  // $('#app-message').hide()
-  // $('#get-exercises').hide()
   const showExercisesHtml =
    showExercisesTemplate({ exercises: data.exercises })
   $('#all-exercises-content').show()
@@ -62,10 +59,8 @@ const updateExerciseSuccess = function (data) {
   // console.log('updated exercise data is', data)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
-  // $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  // $('#get-exercises').show()
   $('#app-message').show()
   $('#app-message').text('Your exercise was succussfully updated!')
   // console.log('store exercise is', store.exercise)
@@ -83,10 +78,8 @@ const deleteExerciseSuccess = function () {
   // console.log('deleted exercise data is', store.exercise)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
-  // $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  // $('#get-exercises').show()
   $('#app-message').show()
   $('#app-message').text('Your exercise was succussfully deleted!')
   // console.log('store exercise is', store.exercise)
