@@ -23,7 +23,7 @@ const signInSuccess = function (data) {
   $('#sign-in input:text').val(null)
   $('#sign-in input:password').val(null)
   $('#all-exercises-page').show()
-  $('#get-exercises').show()
+  // $('#get-exercises').show()
   $('#app-nav-bar').show()
   $('#change-password-link').show()
 }

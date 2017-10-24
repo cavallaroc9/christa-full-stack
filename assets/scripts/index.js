@@ -24,4 +24,5 @@ $(() => {
   $('#all-exercises-page').hide()
   $('#new-exercise-page').hide()
   $('#edit-exercise-page').hide()
+  $('#app-message').hide()
 })

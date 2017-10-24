@@ -8,10 +8,9 @@ const createExerciseSuccess = function (data) {
   store.exercise = data.exercise
   // console.log('create exercise data is', data)
   $('#new-exercise-page').hide()
-  $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  $('#get-exercises').show()
+  // $('#get-exercises').show()
   $('#new-exercise-page input').val(null)
   $('#app-message').show()
   $('#app-message').text('Your exercise was succussfully added!')
@@ -19,16 +18,16 @@ const createExerciseSuccess = function (data) {
   // console.log('store user is', store.user)
 }
 
-const createExerciseFailure = function (error) {
-  console.error(error)
+const createExerciseFailure = function () {
+  // console.error(error)
   $('#app-message').show()
   $('#app-message').text('Oops! Something went wrong. Please try again. Please note that some fields are required.')
 }
 
 const getExercisesSuccess = (data) => {
   // console.log(data)
-  $('#app-message').hide()
-  $('#get-exercises').hide()
+  // $('#app-message').hide()
+  // $('#get-exercises').hide()
   const showExercisesHtml =
    showExercisesTemplate({ exercises: data.exercises })
   $('#all-exercises-content').show()
@@ -63,10 +62,12 @@ const updateExerciseSuccess = function (data) {
   // console.log('updated exercise data is', data)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
-  $('#app-message').hide()
+  // $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  $('#get-exercises').show()
+  // $('#get-exercises').show()
+  $('#app-message').show()
+  $('#app-message').text('Your exercise was succussfully updated!')
   // console.log('store exercise is', store.exercise)
   // console.log('store user is', store.user)
 }
@@ -82,10 +83,10 @@ const deleteExerciseSuccess = function () {
   // console.log('deleted exercise data is', store.exercise)
   $('#edit-exercise-page').hide()
   $('#edit-exercise-content').hide()
-  $('#app-message').hide()
+  // $('#app-message').hide()
   $('#all-exercises-content').hide()
   $('#all-exercises-page').show('swing')
-  $('#get-exercises').show()
+  // $('#get-exercises').show()
   $('#app-message').show()
   $('#app-message').text('Your exercise was succussfully deleted!')
   // console.log('store exercise is', store.exercise)
