@@ -9,7 +9,7 @@
  <label for="example-text-input" class="col-2">Weight per Set (lbs)<span class="asterisk"> *</span></label>
  <div class="col-10">
 <div class="col-10">
-<input class="app-form form-control form-control-lg" type="number" name="exercise[weight]" value="{{exercise.weight}}">
+<input class="app-form form-control form-control-lg" type="number" name="exercise[weight]" value="{{exercise.weight}}" min="0">
 </div>
 </div>
 </div>
@@ -18,7 +18,7 @@
 <label for="example-text-input" class="col-2"># of Sets<span class="asterisk"> *</span></label>
 <div class="col-10">
 <div class="col-10">
-<input class="app-form form-control form-control-lg" type="number" name="exercise[sets]" value="{{exercise.sets}}">
+<input class="app-form form-control form-control-lg" type="number" name="exercise[sets]" value="{{exercise.sets}}" min="0">
 </div>
 </div>
 </div>
@@ -27,7 +27,7 @@
 <label for="example-text-input" class="col-2">Repetitions<span class="asterisk"> *</span></label>
 <div class="col-10">
 <div class="col-10">
-<input class="app-form form-control form-control-lg" type="number" name="exercise[reps]" value="{{exercise.reps}}">
+<input class="app-form form-control form-control-lg" type="number" name="exercise[reps]" value="{{exercise.reps}}" min="0">
 </div>
 </div>
 </div>
